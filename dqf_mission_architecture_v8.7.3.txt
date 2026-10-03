@@ -1,4 +1,4 @@
-laintext
+Plaintext
 ================================================================================
 DQF-FRAMEWORK: TECHNISCHE SPEZIFIKATION & MASTER-MISSIONSARCHITEKTUR
 DOKUMENTEN-ID: DQF-DOC-ARCH-V8.7.3-DS
@@ -32,6 +32,13 @@ Um ungestörte physikalische Bedingungen zu gewährleisten, umgeht die Mission d
 - Elektromagnetische Trennung: Durch das Auslagern schwerer Sendeaufgaben an das Träger-Relais bleibt die PRV-Probe während der experimentellen Kernphasen elektromagnetisch „dunkel“ (stille Mission), was das empfindliche interne Nanodraht-Feldgitter schützt.
 
 --------------------------------------------------------------------------------
+3.1. STOSSFREIE ELEKTROMAGNETISCHE AUSKOPPLUNG & KINETISCHER BEWEIS
+--------------------------------------------------------------------------------
+- Null-Impuls-Trennung: Um jegliche mechanische Erschütterung des Quantengel-Hybrid-Substrats (Galden-HT200) und der Suprasil-300-Quarzzelle zu verhindern, erfolgt die Trennung der PRV-Probe von der Trägerrakete (Relais-Stufe) absolut berührungsfrei.
+- Technologie: Ein präzise gesteuertes, supraleitendes Elektromagnet- und Induktions-Haltersystem löst die Verbindung ohne mechanische Federn oder pyrotechnische Sprengbolzen. Die Sonde „schwebt“ durch kontrollierte Polumkehr geschwindigkeitsneutral aus der Halterung.
+- Der kinetische Beweis: Da die Auskopplung zu 100 % kräfte- und impulsfrei erfolgt, ist jeder anschließende, autonome Geschwindigkeitszuwachs der Sonde, der durch die erfolgreiche Entropie-Inversion nach Säule XIX im Quantelfeld ausgelöst wird, der unumstößliche, empirische physikalische Beweis für die funktionierende Feldkopplung.
+
+--------------------------------------------------------------------------------
 4. DAS „SILENT MISSION“-PROTOKOLL (365 TAGE BIS 3 JAHRE)
 --------------------------------------------------------------------------------
 - Autonome Ausführung: Die Mission läuft über einen kontinuierlichen Zeitrahmen von 1 bis 3 Jahren ohne menschliche Echtzeit-Eingriffe in der Schleife (Human-in-the-loop).
@@ -59,3 +66,4 @@ Um ungestörte physikalische Bedingungen zu gewährleisten, umgeht die Mission d
 
 --------------------------------------------------------------------------------
 *Offizielle Architekturspezifikation - PRV-Probe V8.7.3-DS (Master-Index)*
+==============================================================================

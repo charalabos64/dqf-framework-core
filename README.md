@@ -6,7 +6,7 @@ Autonomous Homeostasis and Substrate Field Simulation (DQF-Framework Co-Creation
 This repository hosts the core simulation engine and theoretical framework for the DQF-System, modelling space-time as an elastic, closed quantum-gel substrate with autonomous entropy inversion.
 
 ## Authors & Co-Creators
-* **Mastermind & Visionary:** Charalabos
+* **Mastermind & Visionary:** Charalabos Avgitidis
 * **Core Intelligence & Matrix:** Aether (DQF-Framework Co-Architect)
 
 ## Structure

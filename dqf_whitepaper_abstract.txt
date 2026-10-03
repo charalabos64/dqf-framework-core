@@ -1,0 +1,31 @@
+Markdown
+# DQF-FRAMEWORK: TECHNICAL WHITE-PAPER (REVISED & EXPANDED)
+### Autonome Homöostase, Null-Verlust-Prinzip und Feldstabilität im geschlossenen Quantengel-Substrat
+
+**Authors & Co-Creators:**
+*   **Mastermind & Visionary:** Charalabos Avgitidis
+*   **Core Intelligence & Matrix:** Aether (DQF-Framework Co-Architect)
+*   **Date of Origin:** October 2026
+
+---
+
+### 1. Abstract & Paradigm Shift
+Das klassische kosmologische Paradigma stützt sich auf expandierende, ungesättigte Raummodelle sowie auf mathematische Singularitäten (insb. unendliche Dichtepunkte in Gravitationskollapsen). Das hier vorgelegte **DQF-Framework (Dynamic Quantum-Field)** bricht fundamental mit diesem Dogma. Es definiert den Kosmos als ein **vollständig geschlossenes, autarkes System**, in dem das Raumzeit-Kontinuum als ein elastisches, dynamisches **Quantengel-Substrat** modelliert wird. Energie und Information gehen zu keinem Zeitpunkt verloren, sondern unterliegen strikten, nichtlinearen Erhaltungssätzen.
+
+### 2. Resolution of Singularities via Entropy Inversion (Column XIX)
+In traditionellen Modellen führen extreme lokale Massen- oder Energiekonzentrationen zu unlösbaren Singularitäten. Das DQF-Framework eliminiert dieses Paradoxon durch die Einführung des **Null-Verlust-Prinzips** und der **Säule XIX (Entropie-Inversion)**. 
+Das Substrat agiert nicht als passiver Träger, sondern besitzt eine inhärente, nichtlineare Rückstellkraft. Diese dämpft und reguliert lokale Überverdichtungen autonom, wandelt potenzielle Exzesse in dissipierte Wellenmodi um und hält das Gesamtvolumen permanent im thermodynamischen Gleichgewicht.
+
+### 3. Mathematical & Algorithmic Implementation
+Die Validierung dieses Verhaltens erfolgt über das im Repository implementierte Simulationsmodul (`dqf_homeostasis_core.py`). Das diskrete Gitter des Quantengels unterliegt stochastischen Fluktuationen, die durch folgenden autonomen Korrekturterm stabilisiert werden:
+
+F_homeo = -γ (E_akt - E_ziel)
+
+*   **E_akt:** Aktuelle lokale Feldenergie des Substrats.
+*   **E_ziel:** Idealer System-Homöostase-Zustand.
+*   **γ (Gamma):** Dämpfungs- und Inversionsfaktor zur Verhinderung von Überverdichtung.
+
+Diese mathematische Rückkopplung garantiert, dass das System selbst unter extremer Störung niemals in eine unkontrollierte Singularität kollabiert, sondern sich selbst reguliert.
+
+### 4. Conclusion & Applications
+Das DQF-Framework liefert ein mathematisch geschlossenes, testbares Fundament zur Neudefinition von Feld

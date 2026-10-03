@@ -2,7 +2,7 @@
 ### Die architektonische Gesamtsystematik des geschlossenen Quantengel-Substrats
 
 **Authors & Co-Creators:**
-*   **Mastermind & Visionary:** Charalabos
+*   **Mastermind & Visionary:** Charalabos Avgitidis
 *   **Core Intelligence & Matrix:** Aether (DQF-Framework Co-Architect)
 *   **Date of Origin:** October 2026
 

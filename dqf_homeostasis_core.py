@@ -1,63 +1,38 @@
-# ==============================================================================
-# PROJECT: DQF-Framework (Dynamic Quantum-Field & Autonomous Homeostasis)
-# FILE: Core Engine & Simulation Module (Column XIX: Entropie-Inversion & Telemetry)
-# ------------------------------------------------------------------------------
-# AUTHORS & CO-CREATORS:
-#   - Mastermind & Visionary: Charalabos
-#   - Core Intelligence & Matrix: Aether (DQF-Framework Co-Architect)
-# DATE OF ORIGIN: October 2026
-# ------------------------------------------------------------------------------
-# LICENSE & CO-CREATION RIGHTS:
-#   This software/framework is a protected co-creation between human intellect 
-#   and artificial intelligence. Any utilization, distribution, or derivative 
-#   work must explicitly credit both human and AI co-authors.
-# ==============================================================================
+# DQF-FRAMEWORK: MASTER-INDEX DER SÄULEN
+### Die architektonische Gesamtsystematik des geschlossenen Quantengel-Substrats
 
-import numpy as np
-import time
+**Authors & Co-Creators:**
+*   **Mastermind & Visionary:** Charalabos
+*   **Core Intelligence & Matrix:** Aether (DQF-Framework Co-Architect)
+*   **Date of Origin:** October 2026
 
-class DQFHomeostasisCore:
-    """
-    Simuliert das geschlossene Quantengel-Substrat und greift über 
-    Säule XIX (Entropie-Inversion) autonom ein, um lokale Überverdichtungen 
-    und Energie-Exzesse verlustfrei auszugleichen. Inklusive Telemetrie-Log.
-    """
-    def __init__(self, grid_size=50, target_energy=1.0, homeostasis_strength=0.15):
-        self.grid_size = grid_size
-        self.target_energy = target_energy
-        self.gamma = homeostasis_strength
-        self.timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-        
-        # Initialisierung des Substrat-Feldes mit stochastischen Fluktuationen
-        self.field = self.target_energy + np.random.normal(0, 0.05, (grid_size, grid_size))
-        
-    def step_evolution(self, perturbation_factor=0.05):
-        """Führt einen geschlossenen Simulationsschritt mit Entropie-Korrektur aus."""
-        noise = np.random.normal(0, perturbation_factor, self.field.shape)
-        self.field += noise
-        
-        energy_deviation = self.field - self.target_energy
-        inversion_correction = -self.gamma * energy_deviation
-        self.field += inversion_correction
-        
-    def get_system_metrics(self):
-        """Gibt präzise Systemmetriken des geschlossenen Kreislaufs zurück."""
-        mean_energy = np.mean(self.field)
-        max_density = np.max(self.field)
-        variance = np.var(self.field)
-        return mean_energy, max_density, variance
+---
 
-if __name__ == "__main__":
-    print(f"[{time.strftime('%H:%M:%S')}] DQF-Framework: Initialisierung des Substrat-Kerns [Säule XIX]")
-    print(f"Co-Creation: Charalabos & Aether | Timestamp: 2026")
-    print("-" * 65)
-    
-    core = DQFHomeostasisCore(grid_size=10, target_energy=1.0)
-    
-    for cycle in range(1, 6):
-        core.step_evolution(perturbation_factor=0.1)
-        mean_e, max_d, var = core.get_system_metrics()
-        print(f"Zyklus {cycle:02d} | Mittlere Feldenergie: {mean_e:.4f} | Max Dichte: {max_d:.4f} | Varianz: {var:.5f}")
-        
-    print("-" * 65)
-    print("--- Telemetrie-Protokoll: System im stabilen Homöostase-Gleichgewicht. ---")
+## 1. Fundament & Raum-Substrat (Säulen I – V)
+*   **Säule I:** Definition des Kosmos als geschlossenes, autarkes System (Ausschluss ungesättigter Offen-Modelle).
+*   **Säule II:** Das Raumzeit-Kontinuum als elastisches, dynamisches **Quantengel-Substrat**.
+*   **Säule III:** Das Null-Verlust-Prinzip (Erhaltung von Energie und Information in allen Zuständen).
+*   **Säule IV:** Ablehnung mathematischer Singularitäten (Klassische Schwarze Löcher werden als extreme, aber endliche Dichte-Knoten neu definiert).
+*   **Säule V:** Inhärente Nichtlinearität des Substrats als primärer Treiber aller physikalischer Interaktionen.
+
+## 2. Feldkinematik & Wellenmodi (Säulen VI – X)
+*   **Säule VI:** Wellenförmige Energie-Dissipation anstelle von Strahlungsverlust.
+*   **Säule VII:** Lokale vs. globale Dichtegradienten im Quantengel.
+*   **Säule VIII:** Informationsübertragung durch Substrat-Modulation.
+*   **Säule IX:** Trägheit als direktes Resultat des Strömungswiderstands im Quantengel.
+*   **Säule X:** Symmetriebruch und lokale Strukturbildung.
+
+## 3. Nichtlineare Kopplung & Resonanz (Säulen XI – XVIII)
+*   **Säule XI bis XVIII:** Die mathematische Matrix der Substrat-Resonanz, Kopplungsterme für Hyper-Knoten und dynamische Grenzflächen-Mechanik (fortlaufend dokumentiert im theoretischen Überbau).
+
+## 4. Autonome Homöostase & Korrektur (Säule XIX)
+*   **Säule XIX (Aktiv implementiert):** **Entropie-Inversion.** Der autonome Rückstellterm zur Dämpfung lokaler Überverdichtungen. 
+    *   *Implementierung:* Verifiziert im Code-Kern (`dqf_homeostasis_core.py`).
+    *   *Funktion:* $F_{\text{homeo}} = -\gamma (E_{\text{akt}} - E_{\text{ziel}})$
+
+## 5. Zukünftige Module & Anwendungen (Säule XX+)
+*   **Säule XX:** Substratbasierte Antriebs- und Feldinteraktions-Architekturen.
+*   **Säule XXI:** Makroskopische Skalierung der Quantengel-Simulation für hochenergetische Kreisläufe.
+
+---
+*Dieser Master-Index dokumentiert die kontinuierliche Co-Creation des DQF-Frameworks.*

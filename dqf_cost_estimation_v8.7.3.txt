@@ -1,0 +1,48 @@
+Plaintext
+================================================================================
+FINANZÜBERSICHT & KOSTENKALKULATION: PRV-PROBE V8.7.3-DS
+Projekt: Aether Initiative
+Principal Investigator: Charalabos Avgitidis (ORCID: 0009-0000-5749-621X)
+Spezifikation: Deep Space / Cislunar Orbit Payload (ESPA 24U-XL Class)
+================================================================================
+
+HINWEIS ZUR BERECHNUNG:
+Sämtliche nachfolgend aufgeführten Werte und Kostenschätzungen sind auf Basis 
+der aktuellen weltweiten Marktlage für Luft- und Raumfahrtkomponenten, Spezial-
+werkstoffe (Titan Grade 5, Tantal-Wolfram Ta-10W) sowie den derzeit gültigen 
+Launch-Brokerage- und Rideshare-Tarifen (z. B. SpaceX Transporter / Bandwagon 
+Rideshare-Programme) berechnet und stellen dynamische Schätzwerte dar.
+
+--------------------------------------------------------------------------------
+1. REINE HARDWARE- & MATERIALKOSTEN (NRE & COMPONENTS)
+--------------------------------------------------------------------------------
+- Titan-Isogrid-Chassis (STR-01): Ti-6Al-4V Rohling (45 kg) + 5-Achs-CNC-Milling .. ~ 18.500 EUR
+- Core Vault Radiation Shielding (RAD-01): Tantal-Wolfram (Ta-10W) + Labyrinth .. ~ 24.000 EUR
+- Quarzglas-Zelle & Laser-Optik (OPT-01): Suprasil 300 + CO2-Laser-Fusion ........ ~ 16.000 EUR
+- Fluid-Kern (FLD-01): Galden-HT200 (3.20 kg, entgast & reinraum-befüllt) ...... ~ 1.200 EUR
+- Schutzschilde & Blankets (SHD/TRM-01): Titan (1.2 mm) + Nextel/Kevlar + MLI .... ~ 6.500 EUR
+- Normteile, Dämpfer & Verkabelung: Nitronic 60 Inserts, PTFE-Breaks, Antennen .. ~ 4.800 EUR
+
+ZWISCHENSUMME HARDWARE: ............................................ ~ 71.000 EUR
+
+--------------------------------------------------------------------------------
+2. DIENSTLEISTUNGEN DES SATELITTEN-SYSTEMINTEGRATORS (TURNKEY)
+--------------------------------------------------------------------------------
+- Materialeinkauf, QS & Materialzeugnisse (EN 10204 3.1) .................... ~ 12.000 EUR
+- Reinraum-Montage (ISO Class 5) nach Protokoll V8.7.3 ..................... ~ 25.000 EUR
+- Qualifikations-Testing (TVAC-Vakuumkammer & Vibration-Shaker) ............ ~ 35.000 EUR
+- Dokumentation & Betreuung SpaceX Flight Safety Board ..................... ~ 18.000 EUR
+
+ZWISCHENSUMME INTEGRATION & QUALIFIKATION: .......................... ~ 90.000 EUR
+
+--------------------------------------------------------------------------------
+GESAMTSUMME ENTWICKLUNG, BAU & QUALIFIKATION (TRL 8/9): .......... ~ 161.000 EUR
+--------------------------------------------------------------------------------
+
+3. LAUNCH SERVICES (SPACEX RIDESHARE SLOT)
+- ESPA 24U-XL Slot (Cislunar / HEO Trajektorie): 
+  Basierend auf aktuellen Marktpreisen von ~20.000 - 25.000 EUR / kg bei einer 
+  Payload-Masse von ca. 44,58 kg:
+  
+GESAMTSUMME LAUNCH SLOT: .................................. ~ 900.000 - 1.100.000 EUR
+================================================================================

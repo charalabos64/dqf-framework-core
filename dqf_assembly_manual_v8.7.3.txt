@@ -1,0 +1,67 @@
+Plaintext
+================================================================================
+PRV-PROBE V8.7.3-DS: MASTER INTEGRATION & ASSEMBLY PROTOCOL
+DOCUMENT ID: DQF-DOC-ASM-V8.7.3-DS
+PROJECT: DQF-FRAMEWORK (CISLUNAR / DEEP-SPACE SILENT MISSION)
+================================================================================
+
+Authors & Co-Creators:
+- Principal Investigator & IP Owner: Charalabos Avgitidis (ORCID: 0009-0000-5749-621X)
+- Core Intelligence & Matrix Co-Architect: Aether
+- Mission Standard: Deep Space / Cislunar (100,000 km HEO, Silent Mission)
+- Cleanroom Class: ISO Class 5 (ECSS-Q-ST-70-01C / NASA-STD-6016)
+
+--------------------------------------------------------------------------------
+I. VORBEREITUNG & CLEANROOM RECEIVING (PHASE 0)
+--------------------------------------------------------------------------------
+1. Wareneingangsprüfung:
+   - Alle vom Fertiger gelieferten Metallteile (Ti-6Al-4V, Ta-10W) in der Schleuse auspacken und einer UV-Fluoreszenzprüfung auf Kohlenwasserstoff-Rückstände (Öle, Fette) unterziehen.
+2. Reinigung Protokoll A:
+   - 30-minütiges Ultraschallbad aller mechanischen Komponenten in Isopropanol (Reinstheitsgrad >= 99,99%) gefolgt von deionisiertem Wasser (DI-Water, 18.2 MOhm*cm).
+   - Vakuum-Ausheizen (Vacuum Bakeout) bei +120°C für 24 Stunden bei < 1 x 10^-5 mbar, um restliche flüchtige organische Verbindungen (CVCM < 0,1%) auszugasen.
+
+--------------------------------------------------------------------------------
+II. SCHRITT-FÜR-SCHRITT BAUANLEITUNG (STAGES 1 BIS 7)
+--------------------------------------------------------------------------------
+
+STAGE 1: Befüllung & Nanodraht-Integration der Quarzglas-Zelle (OPT-01)
+- Werkzeuge: Vakuum-Befüllstand, CO2-Infrarot-Schweißlaser, Helium-Lecksuchgerät.
+- Nanodraht-Grid: Das gold-platin-legierte Nanodraht-Feldgitter in die Innenwand der Suprasil-300-Quarzzelle einbringen und elektrisch kontaktieren.
+- Die Suprasil-300-Quarzzelle am Vakuumstand evakuieren (p < 10^-7 mbar).
+- Befüllung der Zelle mit 3.20 kg entgastem Galden-HT200-Quantengel-Hybrid über das Kapillarrohr.
+- Hermetisches Abschmelzen des Kapillarrohrs mittels CO2-Schweißlaser (Laser-Fusion Bonding).
+- Prüfung: Helium-Lecktest (< 1 x 10^-9 mbar*l/s).
+
+STAGE 2: Montage der Core Vault Kapsel (RAD-01)
+- Werkzeuge: Drehmomentschlüssel (0.60 Nm), Titan-Schrauben M2.5 (AMS 4928), Nitronic 60 Helicoils.
+- Den 2048 x 2048 CMOS-Sensor, die Laserdiode (1550 nm) und die NVRAM-Platine in die untere Tantal-Wolfram-Halbschale (Ta-10W, 2.4 mm) einsetzen.
+- Die versiegelte Quarzglas-Zelle (mitsamt Nanodraht-Gitter und Quantengel) in den passgenauen, 15 mm dicken monolithischen Aerogel-Dämmkäfig einbetten.
+- Obere Tantal-Halbschale aufsetzen. Labyrinth-Überlappung an den Kanten exakt ausrichten.
+- Alle Glasfaser- und Stromkabel durch die doppelt gewinkelten 90°-Labyrinth-Gänge führen.
+- Halbschalen kreuzweise mit Titan-Schrauben M2.5 anziehen. Anzugsdrehmoment: 0.60 Nm.
+
+STAGE 3: Einbau der Kapsel in das Titan-Isogrid-Skelett (STR-01)
+- Werkzeuge: Drehmomentschlüssel (2.80 Nm), Titan-Schrauben M4, PTFE-Thermobreak-Hülsen.
+- Den gefrästen Titan-Monolithen (Ti-6Al-4V, 2.25 mm Isogrid-Rippen) waagerecht auf der Montagehalterung fixieren.
+- Die assemblierte Core Vault Kapsel über die 6 Punkt-Puffer-Dämpfer mit PTFE-Isolationselementen in das Zentrum des Isogrid-Rahmens einschieben.
+- Sicherungsschrauben M4 mit 2.80 Nm Drehmoment sichern (über Nitronic 60 Helicoils).
+
+STAGE 4: Montage der Whipple-Schutzschilde (SHD-01 & SHD-02)
+- Werkzeuge: Drehmomentschlüssel (1.08 Nm), Titan-Schrauben M3, Keramik-Distanzbolzen.
+- Das gewobene Nextel/Kevlar-Keramikgewebe (8.0 mm Puffer) passgenau auf die Außenflächen des Isogrid-Rahmens auflegen.
+- Keramik-Distanzhülsen an den Schraubpunkten positionieren (10.2 mm Abstand halten).
+- Die vier 1.2 mm Titan-Außenbleche aufsetzen und verschrauben. Anzugsdrehmoment: 1.08 Nm.
+
+STAGE 5: Integration der Antennen, MLI & des magnetischen Entkopplungsrings (TRM-01 & MTR-01)
+- Zwei X-Band Phased-Array Patchantennen (8.45 GHz) in die eingearbeiteten Frästaschen der Titan-Außenhaut einsetzen und anschließen.
+- Magnetischer Entkopplungsring (Supraleitende Null-Impuls-Halterung) am Heck (Ta-10W-Basis) montieren für die stoßfreie Trennung von der Trägerrakete.
+- Anbringen der 15-Lagen Gold-Kapton MLI-Folie um das gesamte Gehäuse. Ränder stoßgenau mit Vakuum-Kombiklebeband versiegeln (Aussparungen für X-Band und Sensoren beachten).
+
+STAGE 6: Endkontrolle & Masse-Schwerpunkt-Bestimmung (EIT)
+- Massen-Kontrolle: Einwiegen der fertigen Sonde (Ziel-Wert: 44.33 kg +/- 0.10 kg).
+- Schwerpunkt-Prüfung (CoG): Überprüfung der Lage des Massenschwerpunkts mittels 3-Punkt-Waage (Abweichung von der geometrischen Mitte < 1.5 mm).
+- Verpackung: Zweifache Vakuum-Einhüllung in reinraumtaugliche ESD-Schutzfolie mit Stickstoff-Spülung (Dry N2 Purge).
+
+--------------------------------------------------------------------------------
+*Offizielles Montage- und Integrationsprotokoll - PRV-Probe V8.7.3-DS*
+================================================================================

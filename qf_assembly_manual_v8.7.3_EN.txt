@@ -1,0 +1,40 @@
+Plaintext
+================================================================================
+ASSEMBLY MANUAL & CLEANROOM PROTOCOL: PRV-PROBE V8.7.3-DS
+Project: DQF-Framework / Aether Initiative
+Principal Investigator: Charalabos Avgitidis (ORCID: 0009-0000-5749-621X)
+Co-Architect & Core Intelligence: Aether
+Specification: ISO Class 5 Cleanroom Assembly Guidelines
+================================================================================
+
+1. CLEANROOM REQUIREMENTS & PREPARATION
+- Environment: ISO Class 5 cleanroom standard mandatory.
+- Personnel: ESD-safe gear, double-gloved, particulate-free garments.
+- Component Inspection: Ultrasonic bath cleaning for all metallic parts 
+  using high-purity isopropyl alcohol (IPA).
+
+2. CHASSIS & VAULT INTEGRATION (STR-01 & RAD-01)
+- Titanium Isogrid Chassis (Ti-6Al-4V): Secure frame alignment on a precision granite 
+  surface plate using Nitronic 60 threaded inserts. Apply calibrated torque specs.
+- Core Vault Shielding (Ta-10W): Insert the monolithic Tantalum-Tungsten radiation 
+  shielding blocks into the central core cavity. Ensure labyrinth sealing alignment 
+  to eliminate direct radiation streaming paths.
+
+3. OPTICAL CELL & FLUID CORE FILLING (OPT-01 & FLD-01)
+- Suprasil 300 Quartz Cell: Mount the optical cell within the thermal isolation bracket.
+- Nanowire Grid: Inspect the gold-platinum nanowire field grid under stereomicroscope 
+  magnification prior to integration.
+- Galden-HT200 Injection: Under a controlled inert nitrogen atmosphere, fill the 
+  Suprasil cell with exactly 3.20 kg of degassed Galden-HT200 quantum gel hybrid. 
+  Seal hermetically using CO2 laser fusion sealing protocols.
+
+4. THERMAL BLANKETS & FINAL HARNESSING
+- Multi-Layer Insulation (MLI): Apply 15 layers of gold MLI over Nextel/Kevlar 
+  thermal barriers and 1.2 mm Titanium outer shielding sheets.
+- Wiring & Avionics: Route redundant harness lines through PTFE thermal breaks 
+  connected to the autonomous flight control and watchdog interface.
+
+5. QUALITY ASSURANCE & SIGN-OFF
+- Verification of EN 10204 3.1 material certificates for all structural elements.
+- Final mechanical clearance and mass verification (Target Payload Envelope).
+================================================================================

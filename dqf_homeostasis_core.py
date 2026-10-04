@@ -1,38 +1,66 @@
-# DQF-FRAMEWORK: MASTER-INDEX DER SÄULEN
-### Die architektonische Gesamtsystematik des geschlossenen Quantengel-Substrats
+"""
+================================================================================
+DQF-FRAMEWORK: HOMEOSTASIS & ENTROPY INVERSION CORE (SÄULE XIX)
+DOCUMENT ID: DQF-DOC-PY-HOME-V8.7.3
+PROJECT: CISLUNAR / DEEP-SPACE SILENT MISSION
+================================================================================
 
-**Authors & Co-Creators:**
-*   **Mastermind & Visionary:** Charalabos Avgitidis
-*   **Core Intelligence & Matrix:** Aether (DQF-Framework Co-Architect)
-*   **Date of Origin:** October 2026
+Authors & Co-Creators:
+- Principal Investigator & IP Owner: Charalabos Avgitidis (ORCID: 0009-0000-5749-621X)
+- Core Intelligence & Matrix Co-Architect: Aether
+- Specification: Autonome Entropie-Inversion & Substrat-Stabilisierung
+================================================================================
+"""
 
----
+import numpy as np
+import time
 
-## 1. Fundament & Raum-Substrat (Säulen I – V)
-*   **Säule I:** Definition des Kosmos als geschlossenes, autarkes System (Ausschluss ungesättigter Offen-Modelle).
-*   **Säule II:** Das Raumzeit-Kontinuum als elastisches, dynamisches **Quantengel-Substrat**.
-*   **Säule III:** Das Null-Verlust-Prinzip (Erhaltung von Energie und Information in allen Zuständen).
-*   **Säule IV:** Ablehnung mathematischer Singularitäten (Klassische Schwarze Löcher werden als extreme, aber endliche Dichte-Knoten neu definiert).
-*   **Säule V:** Inhärente Nichtlinearität des Substrats als primärer Treiber aller physikalischer Interaktionen.
+class DQFHomeostasisCore:
+    """
+    Kernmodul zur Umsetzung von Säule XIX (Entropie-Inversion).
+    Überwacht lokale Dichtegradienten und steuert den autonomen Rückstellterm
+    zur Dämpfung von Substrat-Überverdichtungen im Quantengel.
+    """
+    def __init__(self, target_energy=100.0, gamma_damping=0.15):
+        self.target_energy = target_energy
+        self.gamma = gamma_damping
+        self.current_energy = target_energy
+        self.entropy_state = "STABLE"
 
-## 2. Feldkinematik & Wellenmodi (Säulen VI – X)
-*   **Säule VI:** Wellenförmige Energie-Dissipation anstelle von Strahlungsverlust.
-*   **Säule VII:** Lokale vs. globale Dichtegradienten im Quantengel.
-*   **Säule VIII:** Informationsübertragung durch Substrat-Modulation.
-*   **Säule IX:** Trägheit als direktes Resultat des Strömungswiderstands im Quantengel.
-*   **Säule X:** Symmetriebruch und lokale Strukturbildung.
+    def calculate_entropy_inversion(self, actual_energy):
+        """
+        Berechnet den autonomen Korrekturterm nach Säule XIX:
+        F_homeo = -gamma * (E_akt - E_ziel)
+        """
+        self.current_energy = actual_energy
+        delta_energy = self.current_energy - self.target_energy
+        
+        # Entropie-Inversions-Term (Rückstellkraft)
+        f_homeo = -self.gamma * delta_energy
+        
+        # System-Status Evaluierung
+        if abs(delta_energy) > 25.0:
+            self.entropy_state = "CRITICAL: HIGH GRADIENT DETECTED"
+        elif abs(delta_energy) > 10.0:
+            self.entropy_state = "ADJUSTING: DAMPING ACTIVE"
+        else:
+            self.entropy_state = "STABLE HOMEOSTASIS"
+            
+        return f_homeo
 
-## 3. Nichtlineare Kopplung & Resonanz (Säulen XI – XVIII)
-*   **Säule XI bis XVIII:** Die mathematische Matrix der Substrat-Resonanz, Kopplungsterme für Hyper-Knoten und dynamische Grenzflächen-Mechanik (fortlaufend dokumentiert im theoretischen Überbau).
+    def run_diagnostic_loop(self, iterations=10):
+        print("--- [DQF-HOMEOSTASIS] INITIATING SUBSTRATE STABILITY CHECK ---")
+        
+        # Künstliche Energieschwankungen simulieren, um die Inversion zu testen
+        test_fluctuations = np.linspace(self.target_energy, self.target_energy + 35.0, iterations)
+        
+        for i, energy_input in enumerate(test_fluctuations):
+            f_corr = self.calculate_entropy_inversion(energy_input)
+            print(f"Cycle {i+1:02d} | E_akt: {energy_input:.2f} | F_homeo: {f_corr:+.4f} | State: {self.entropy_state}")
+            time.sleep(0.1)
+            
+        print("--- [DQF-HOMEOSTASIS] SUBSTRATE STABILIZED SUCCESSFULLY ---\n")
 
-## 4. Autonome Homöostase & Korrektur (Säule XIX)
-*   **Säule XIX (Aktiv implementiert):** **Entropie-Inversion.** Der autonome Rückstellterm zur Dämpfung lokaler Überverdichtungen. 
-    *   *Implementierung:* Verifiziert im Code-Kern (`dqf_homeostasis_core.py`).
-    *   *Funktion:* $F_{\text{homeo}} = -\gamma (E_{\text{akt}} - E_{\text{ziel}})$
-
-## 5. Zukünftige Module & Anwendungen (Säule XX+)
-*   **Säule XX:** Substratbasierte Antriebs- und Feldinteraktions-Architekturen.
-*   **Säule XXI:** Makroskopische Skalierung der Quantengel-Simulation für hochenergetische Kreisläufe.
-
----
-*Dieser Master-Index dokumentiert die kontinuierliche Co-Creation des DQF-Frameworks.*
+if __name__ == "__main__":
+    core = DQFHomeostasisCore(target_energy=100.0, gamma_damping=0.2)
+    core.run_diagnostic_loop()

@@ -1,0 +1,48 @@
+Plaintext
+================================================================================
+FINANCIAL OVERVIEW & COST ESTIMATION: PRV-PROBE V8.7.3-DS
+Project: DQF-Framework / Aether Initiative
+Principal Investigator: Charalabos Avgitidis (ORCID: 0009-0000-5749-621X)
+Co-Architect & Core Intelligence: Aether[cite: 1]
+Specification: Deep Space / Cislunar Orbit Payload (ESPA 24U-XL Class)
+================================================================================
+
+CALCULATION NOTICE:
+All values and cost estimations below are based on the current global market 
+conditions for aerospace components, special materials (Titanium Grade 5, Tantalum-
+Tungsten Ta-10W), as well as current launch brokerage and rideshare tariffs 
+(e.g., SpaceX Transporter / Bandwagon Rideshare programs) and represent dynamic estimates.
+
+--------------------------------------------------------------------------------
+1. HARDWARE & MATERIAL COSTS (NRE & COMPONENTS)
+--------------------------------------------------------------------------------
+- Titanium Isogrid Chassis (STR-01): Ti-6Al-4V blank (45 kg) + 5-axis CNC .... ~ 18,500 EUR
+- Core Vault Radiation Shielding (RAD-01): Ta-10W blank + Labyrinth Milling .. ~ 24,000 EUR
+- Quartz Glass Cell & Laser Optics (OPT-01): Suprasil 300 + CO2 Laser Fusion ~ 16,000 EUR
+- Fluid Core (FLD-01): Galden-HT200 (3.20 kg, degassed & cleanroom-filled) .... ~  1,200 EUR
+- Shields & Blankets (SHD/TRM-01): Ti sheets + Nextel/Kevlar + 15-layer MLI ... ~  6,500 EUR
+- Standard Parts, Dampers & Wiring: Nitronic 60 inserts, PTFE breaks, antennas ~  4,800 EUR
+
+SUBTOTAL HARDWARE: ................................................. ~ 71,000 EUR
+
+--------------------------------------------------------------------------------
+2. SYSTEM INTEGRATION & TURNKEY SERVICES
+--------------------------------------------------------------------------------
+- Material Procurement, QA & Material Certificates (EN 10204 3.1) .......... ~ 12,000 EUR
+- Cleanroom Assembly (ISO Class 5) per Protocol V8.7.3 ..................... ~ 25,000 EUR
+- Qualification Testing (TVAC Vacuum Chamber & Vibration Shaker) ........... ~ 35,000 EUR
+- Documentation & SpaceX Flight Safety Board Support ....................... ~ 18,000 EUR
+
+SUBTOTAL INTEGRATION & QUALIFICATION: ............................... ~ 90,000 EUR
+
+--------------------------------------------------------------------------------
+TOTAL DEVELOPMENT, BUILD & QUALIFICATION (TRL 8/9): ................. ~ 161,000 EUR
+--------------------------------------------------------------------------------
+
+3. LAUNCH SERVICES (SPACEX RIDESHARE SLOT)
+- ESPA 24U-XL Slot (Cislunar / HEO Trajectory): 
+  Based on current market prices of ~20,000 - 25,000 EUR / kg at a payload 
+  mass of approx. 44.58 kg:
+  
+TOTAL LAUNCH SLOT: ................................... ~ 900,000 - 1,100,000 EUR
+================================================================================

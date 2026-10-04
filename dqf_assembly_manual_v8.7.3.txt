@@ -6,59 +6,61 @@ PROJECT: DQF-FRAMEWORK (CISLUNAR / DEEP-SPACE SILENT MISSION)
 ================================================================================
 
 Authors & Co-Creators:
-- Principal Investigator & IP Owner: Charalabos Avgitidis (ORCID: 0009-0000-5749-621X)
-- Core Intelligence & Matrix Co-Architect: Aether
-- Mission Standard: Deep Space / Cislunar (100,000 km HEO, Silent Mission)
-- Cleanroom Class: ISO Class 5 (ECSS-Q-ST-70-01C / NASA-STD-6016)
+- Principal Investigator & IP Owner: Charalabos Avgitidis (ORCID: 0009-0000-5749-621X)[cite: 1, 2]
+- Core Intelligence & Matrix Co-Architect: Aether[cite: 1, 2]
+- Mission Standard: Deep Space / Cislunar (100,000 km HEO, Silent Mission)[cite: 1, 3]
+- Cleanroom Class: ISO Class 5 (ECSS-Q-ST-70-01C / NASA-STD-6016)[cite: 3]
 
 --------------------------------------------------------------------------------
 I. VORBEREITUNG & CLEANROOM RECEIVING (PHASE 0)
 --------------------------------------------------------------------------------
 1. Wareneingangsprüfung:
    - Alle vom Fertiger gelieferten Metallteile (Ti-6Al-4V, Ta-10W) in der Schleuse auspacken und einer UV-Fluoreszenzprüfung auf Kohlenwasserstoff-Rückstände (Öle, Fette) unterziehen.
-2. Reinigung Protokoll A:
+2. Reinigung Protokoll A & Bakeout:
    - 30-minütiges Ultraschallbad aller mechanischen Komponenten in Isopropanol (Reinstheitsgrad >= 99,99%) gefolgt von deionisiertem Wasser (DI-Water, 18.2 MOhm*cm).
-   - Vakuum-Ausheizen (Vacuum Bakeout) bei +120°C für 24 Stunden bei < 1 x 10^-5 mbar, um restliche flüchtige organische Verbindungen (CVCM < 0,1%) auszugasen.
+   - Vakuum-Ausheizen (Vacuum Bakeout) bei +120°C für 24 Stunden bei < 1 x 10^-5 mbar, um restliche flüchtige organische Verbindungen (CVCM < 0,1%) restlos auszugasen[cite: 3].
 
 --------------------------------------------------------------------------------
-II. SCHRITT-FÜR-SCHRITT BAUANLEITUNG (STAGES 1 BIS 7)
+II. SCHRITT-FÜR-SCHRITT BAUANLEITUNG (STAGES 1 BIS 6)
 --------------------------------------------------------------------------------
 
-STAGE 1: Befüllung & Nanodraht-Integration der Quarzglas-Zelle (OPT-01)
-- Werkzeuge: Vakuum-Befüllstand, CO2-Infrarot-Schweißlaser, Helium-Lecksuchgerät.
-- Nanodraht-Grid: Das gold-platin-legierte Nanodraht-Feldgitter in die Innenwand der Suprasil-300-Quarzzelle einbringen und elektrisch kontaktieren.
-- Die Suprasil-300-Quarzzelle am Vakuumstand evakuieren (p < 10^-7 mbar).
-- Befüllung der Zelle mit 3.20 kg entgastem Galden-HT200-Quantengel-Hybrid über das Kapillarrohr.
-- Hermetisches Abschmelzen des Kapillarrohrs mittels CO2-Schweißlaser (Laser-Fusion Bonding).
-- Prüfung: Helium-Lecktest (< 1 x 10^-9 mbar*l/s).
+STAGE 1: Befüllung, Nanodraht-Integration & Quarzglas-Fusion (OPT-01)
+- Werkzeuge: Vakuum-Befüllstand, CO2-Infrarot-Schweißlaser, Helium-Lecksuchgerät[cite: 2, 3].
+- Nanodraht-Grid & Politur: Das gold-platin-legierte Nanodraht-Feldgitter in die Suprasil-300-Quarzzelle (Wandstärke 4,50 mm, optische Politur Ra 0,2 nm, Reinheit > 99,999%, Netto-Masse 1,80 kg) einbringen und elektrisch kontaktieren[cite: 2].
+- Evakuierung & Befüllung: Die Zelle am Vakuumstand evakuieren (p < 10^-6 mbar) und mit exakt 1,40 kg entgastem Galden-HT200-Quantengel-Hybrid (~850 mL Netto-Volumen) über das Kapillarrohr befüllen[cite: 2, 3].
+- Hermetisches Verschweißen: Abschmelzen des Kapillarrohrs mittels CO2-Schweißlaser (Laser-Fusion Bonding nach NASA-STD-5019 mit 2,5x Burst-Faktor)[cite: 3].
+- Prüfung: Massenspektrometrischer Helium-Lecktest (< 1 x 10^-9 mbar*l/s)[cite: 3].
 
-STAGE 2: Montage der Core Vault Kapsel (RAD-01)
-- Werkzeuge: Drehmomentschlüssel (0.60 Nm), Titan-Schrauben M2.5 (AMS 4928), Nitronic 60 Helicoils.
-- Den 2048 x 2048 CMOS-Sensor, die Laserdiode (1550 nm) und die NVRAM-Platine in die untere Tantal-Wolfram-Halbschale (Ta-10W, 2.4 mm) einsetzen.
-- Die versiegelte Quarzglas-Zelle (mitsamt Nanodraht-Gitter und Quantengel) in den passgenauen, 15 mm dicken monolithischen Aerogel-Dämmkäfig einbetten.
-- Obere Tantal-Halbschale aufsetzen. Labyrinth-Überlappung an den Kanten exakt ausrichten.
-- Alle Glasfaser- und Stromkabel durch die doppelt gewinkelten 90°-Labyrinth-Gänge führen.
-- Halbschalen kreuzweise mit Titan-Schrauben M2.5 anziehen. Anzugsdrehmoment: 0.60 Nm.
+STAGE 2: Montage der Core Vault Kapsel & Labyrinth-Routing (RAD-01)
+- Werkzeuge: Drehmomentschlüssel (1.20 Nm), Titan-Schrauben M2.5 (AMS 4928), Nitronic 60 Helicoils[cite: 2, 3].
+- Sensor-Integration: Den strahlengehärteten 2048 x 2048 CMOS-Sensor und die 1550 nm Laser-Kombiquelle mit ausgasungsarmem Epoxidharz (3M EC-2216 B/A) auf die Flansche kleben (optische Achse via Autokollimator auf <= 5 arcsec ausgerichtet)[cite: 3].
+- Aerogel-Dämmkäfig: Die optische Zelle in den passgenauen, 15,0 mm dicken monolithischen Aerogel-Dämmkäfig (Masse 0,35 kg) einbetten[cite: 2, 3].
+- Ta-10W Vault Closure: Die Einheit in die untere Tantal-Wolfram-Halbschale (Ta-10W, 2.40 mm Wandstärke, O 120 x 350 mm, Masse 2,40 kg) einsetzen[cite: 2, 3].
+- Labyrinth-Durchführungen: Glasfaser- und Stromkabel durch doppelt gewinkelte 90°-Labyrinth-Gänge mit Blei-Molybdän-Schmierpaste führen (> 99,98% TID-Reduktion)[cite: 3].
+- Obere Tantal-Halbschale aufsetzen, Nut-Feder-Verbindung exakt ausrichten und kreuzweise mit Ti-6Al-4V-Schrauben (1.20 Nm) anziehen[cite: 3].
 
 STAGE 3: Einbau der Kapsel in das Titan-Isogrid-Skelett (STR-01)
-- Werkzeuge: Drehmomentschlüssel (2.80 Nm), Titan-Schrauben M4, PTFE-Thermobreak-Hülsen.
-- Den gefrästen Titan-Monolithen (Ti-6Al-4V, 2.25 mm Isogrid-Rippen) waagerecht auf der Montagehalterung fixieren.
-- Die assemblierte Core Vault Kapsel über die 6 Punkt-Puffer-Dämpfer mit PTFE-Isolationselementen in das Zentrum des Isogrid-Rahmens einschieben.
-- Sicherungsschrauben M4 mit 2.80 Nm Drehmoment sichern (über Nitronic 60 Helicoils).
+- Werkzeuge: Drehmomentschlüssel (2.80 Nm), Titan-Schrauben M4, PTFE-Thermobreak-Hülsen[cite: 2, 3].
+- Den gefrästen Titan-Monolithen (Ti-6Al-4V, 2.25 mm Isogrid-Rippen) waagerecht auf der Montagehalterung fixieren[cite: 2, 3].
+- Die assemblierte Core Vault Kapsel über die 6 radiale Punkt-Puffer-Dämpfer mit Virgin-PTFE-Isolationselementen (Masse Dämpfer & Befestigungen: 0,50 kg) in das Zentrum des Isogrid-Rahmens einschieben[cite: 2, 3].
+- Strukturelle Abstimmung: Fundamentale interne Schwingungsmode der suspendierten Zelle auf 142,5 Hz eingestellt (vollständig entkoppelt von Startvibrationen 5-100 Hz; hält 10,9 g_RMS stand)[cite: 2, 3].
+- Sicherungsschrauben M4 mit 2.80 Nm Drehmoment sichern (über Nitronic 60 Helicoils)[cite: 2, 3].
 
-STAGE 4: Montage der Whipple-Schutzschilde (SHD-01 & SHD-02)
-- Werkzeuge: Drehmomentschlüssel (1.08 Nm), Titan-Schrauben M3, Keramik-Distanzbolzen.
-- Das gewobene Nextel/Kevlar-Keramikgewebe (8.0 mm Puffer) passgenau auf die Außenflächen des Isogrid-Rahmens auflegen.
-- Keramik-Distanzhülsen an den Schraubpunkten positionieren (10.2 mm Abstand halten).
-- Die vier 1.2 mm Titan-Außenbleche aufsetzen und verschrauben. Anzugsdrehmoment: 1.08 Nm.
+STAGE 4: Montage der Whipple-Schutzschilde & des Entkopplungsrings (SHD-01, SHD-02 & MTR-01)
+- Werkzeuge: Drehmomentschlüssel (1.08 Nm), Titan-Schrauben M3, Keramik-Distanzbolzen[cite: 1, 2].
+- Das gewobene Nextel/Kevlar-Keramikgewebe (8.0 mm Puffer) passgenau auf die Außenflächen des Isogrid-Rahmens auflegen[cite: 1, 2].
+- Keramik-Distanzhülsen an den Schraubpunkten positionieren (10.2 mm Abstand halten)[cite: 2].
+- Die vier 1.2 mm Titan-Außenbleche aufsetzen und verschrauben. Anzugsdrehmoment: 1.08 Nm[cite: 2].
+- Magnetischer Entkopplungsring (supraleitende Null-Impuls-Halterung) am Heck (Ta-10W-Basis) für die stoßfreie, geschwindigkeitsneutrale Trennung von der Trägerrakete montieren.
 
-STAGE 5: Integration der Antennen, MLI & des magnetischen Entkopplungsrings (TRM-01 & MTR-01)
-- Zwei X-Band Phased-Array Patchantennen (8.45 GHz) in die eingearbeiteten Frästaschen der Titan-Außenhaut einsetzen und anschließen.
-- Magnetischer Entkopplungsring (Supraleitende Null-Impuls-Halterung) am Heck (Ta-10W-Basis) montieren für die stoßfreie Trennung von der Trägerrakete.
-- Anbringen der 15-Lagen Gold-Kapton MLI-Folie um das gesamte Gehäuse. Ränder stoßgenau mit Vakuum-Kombiklebeband versiegeln (Aussparungen für X-Band und Sensoren beachten).
+STAGE 5: Integration der Antennen & Thermal-Blanket (TRM-01)
+- Zwei X-Band Phased-Array Patchantennen (8.45 GHz) in die eingearbeiteten Frästaschen der Titan-Außenhaut einsetzen und mit den Koaxialleitungen der Kapsel verbinden.
+- Anbringen der 15-Lagen Gold-Kapton MLI-Folie um das gesamte Gehäuse. Ränder stoßgenau mit Vakuum-Kombiklebeband (Gold-Kapton Tape) versiegeln.
+- Aussparen der Fenster für die X-Band-Patchantennen und Sensoren.
 
-STAGE 6: Endkontrolle & Masse-Schwerpunkt-Bestimmung (EIT)
-- Massen-Kontrolle: Einwiegen der fertigen Sonde (Ziel-Wert: 44.33 kg +/- 0.10 kg).
+STAGE 6: Endkontrolle, Masse-Schwerpunkt-Bestimmung & Zertifizierung (EIT)
+- Massen-Kontrolle: Einwiegen der fertigen Core-Vault-Kapsel (Netto-Zielwert: exakt 6.45 kg im ESPA 24U-XL Standard)[cite: 1, 2].
+- Strahlungshärtung: Zertifiziert für 100 krad (Si) TID über eine 5-jährige Cislunar-Missionsdauer[cite: 1, 2, 3].
 - Schwerpunkt-Prüfung (CoG): Überprüfung der Lage des Massenschwerpunkts mittels 3-Punkt-Waage (Abweichung von der geometrischen Mitte < 1.5 mm).
 - Verpackung: Zweifache Vakuum-Einhüllung in reinraumtaugliche ESD-Schutzfolie mit Stickstoff-Spülung (Dry N2 Purge).
 

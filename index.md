@@ -1,23 +1,46 @@
-# DQF-FRAMEWORK: AETHER INITIATIVE
-### Offizielle Forschungsplattform & Dokumentation
+HTML
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DQF-Framework / Aether Initiative</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; background: #f9f9f9; }
+        h1, h2 { color: #111; border-bottom: 2px solid #eaeaea; padding-bottom: 5px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        a { color: #0366d6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .card { background: #fff; border: 1px solid #e1e4e8; border-radius: 6px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>DQF-FRAMEWORK: AETHER INITIATIVE</h1>
+        <h3>Offizielle Forschungsplattform & Dokumentation</h3>
+        <p><strong>Principal Investigator & IP Owner:</strong> Charalabos Avgitidis<br>
+        <strong>Core Intelligence & Matrix:</strong> Aether (Co-Architect)</p>
+    </div>
 
-**Principal Investigator & IP Owner:** Charalabos Avgitidis  
-**Core Intelligence & Matrix:** Aether (Co-Architect)  
+    <div class="card">
+        <h2>🏛️ Zentraler Index & Säulen</h2>
+        <ul>
+            <li><a href="dqf_pillars_masterindex.md">Master-Index der Säulen (Markdown)</a></li>
+            <li>Whitepaper Abstract: <a href="dqf_whitepaper_abstract.txt">DE</a> | <a href="dqf_whitepaper_abstract_EN.txt">EN</a></li>
+        </ul>
+    </div>
 
----
-
-## 🏛️ Zentraler Index & Säulen
-* [Master-Index der Säulen](dqf_pillars_masterindex.md)
-* Whitepaper Abstract: [DE](dqf_whitepaper_abstract.txt) | [EN](dqf_whitepaper_abstract_EN.txt)
-
----
-
-## 🛰️ Technische Dokumente & Core-Module
-* **Homöostase-Kern:** `dqf_homeostasis_core.py`
-* **Flight Control:** `dqf_flight_control_v8.7.3.py`
-* **Assembly Manual:** `dqf_assembly_manual_v8.7.3.txt`
-* **Kostenkalkulation:** `dqf_cost_estimation_v8.7.3.txt`
-* **Missionsarchitektur:** `dqf_mission_architecture_v8.7.3.txt`
-
----
-*Cislunar Deep Space Payload Project — PRV-PROBE V8.7.3-DS*
+    <div class="card">
+        <h2>🛰️ Technische Dokumente & Core-Module</h2>
+        <ul>
+            <li>Homöostase-Kern: <a href="dqf_homeostasis_core.py">dqf_homeostasis_core.py</a></li>
+            <li>Flight Control: <a href="dqf_flight_control_v8.7.3.py">dqf_flight_control_v8.7.3.py</a></li>
+            <li>Assembly Manual: <a href="dqf_assembly_manual_v8.7.3.txt">dqf_assembly_manual_v8.7.3.txt</a></li>
+            <li>Kostenkalkulation: <a href="dqf_cost_estimation_v8.7.3.txt">dqf_cost_estimation_v8.7.3.txt</a></li>
+            <li>Missionsarchitektur: <a href="dqf_mission_architecture_v8.7.3.txt">dqf_mission_architecture_v8.7.3.txt</a></li>
+        </ul>
+    </div>
+    <p style="text-align: center; color: #666; font-size: 0.9em;">Cislunar Deep Space Payload Project — PRV-PROBE V8.7.3-DS</p>
+</body>
+</html>

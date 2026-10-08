@@ -1,58 +1,616 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DQF-Framework / Aether Initiative</title>
+    <title>DQF-Framework – Das Aether-Gel Kompendium (Galileische Edition)</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; background: #f4f6f9; }
-        header { background: linear-gradient(135deg, #1e293b, #0f172a); color: #fff; padding: 30px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { margin: 0 0 10px 0; font-size: 1.8em; letter-spacing: 0.5px; }
-        h3 { margin: 0 0 15px 0; color: #94a3b8; font-weight: 400; font-size: 1.1em; }
-        .meta { font-size: 0.9em; color: #cbd5e1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; margin-top: 15px; }
-        .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-        h2 { color: #1e293b; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; margin-top: 0; font-size: 1.3em; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 12px; }
-        a { color: #2563eb; text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; color: #1d4ed8; }
-        .badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600; margin-left: 8px; }
-        footer { text-align: center; color: #64748b; font-size: 0.85em; margin-top: 40px; }
+        :root {
+            --bg-color: #0d1117;
+            --container-bg: #161b22;
+            --text-color: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --accent-color: #7c3aed;
+            --accent-hover: #6d28d9;
+            --science-color: #fbbf24;
+            --science-hover: #f59e0b;
+            --accent-text: #ffffff;
+            --blockquote-bg: #1f242c;
+            --code-bg: rgba(110, 118, 129, 0.2);
+            --tab-active-bg: #7c3aed;
+            --tab-active-text: #ffffff;
+            --header-border: #30363d;
+        }
+
+        [data-theme="light"] {
+            --bg-color: #f6f8fa;
+            --container-bg: #ffffff;
+            --text-color: #1f2328;
+            --text-muted: #57606a;
+            --border-color: #d0d7de;
+            --accent-color: #7c3aed;
+            --accent-hover: #6d28d9;
+            --science-color: #d97706; 
+            --science-hover: #b45309;
+            --accent-text: #ffffff;
+            --blockquote-bg: #f0f6fc;
+            --code-bg: rgba(175, 184, 193, 0.2);
+            --tab-active-bg: #7c3aed;
+            --tab-active-text: #ffffff;
+            --header-border: #eaecef;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: var(--bg-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .container {
+            background: var(--container-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .top-btn {
+            background-color: var(--container-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-color);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .top-btn:hover {
+            background-color: var(--border-color);
+        }
+
+        .translate-wrapper {
+            display: inline-block;
+        }
+        #google_translate_element select {
+            background-color: var(--container-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .visual-cosmos-box {
+            background: var(--bg-color);
+            border: 1px solid var(--science-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .visual-cosmos-box h3 {
+            color: var(--science-color);
+            margin-top: 0;
+            border-bottom: none;
+        }
+        .svg-container {
+            width: 100%;
+            max-width: 450px;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        .public-guide-box {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--accent-color);
+            padding: 2rem;
+            border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
+        }
+        .public-guide-box h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+            border-bottom: none;
+        }
+        .public-guide-box ul {
+            margin-bottom: 0;
+        }
+
+        .academic-target-box {
+            background: var(--bg-color);
+            border-left: 4px solid var(--science-color);
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
+        }
+        .academic-target-box strong {
+            color: var(--science-color);
+        }
+
+        .practice-example-box {
+            background: var(--bg-color);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
+        }
+        .practice-example-box strong {
+            color: var(--accent-color);
+        }
+
+        .view-scientific h1, .view-scientific h2, .view-scientific h3 {
+            color: var(--science-color) !important;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--header-border);
+            padding-bottom: 0.3em;
+        }
+        h1 { font-size: 2.1rem; margin-bottom: 0.2rem; }
+        h2 { font-size: 1.6rem; margin-top: 2.5rem; }
+        h3 { font-size: 1.3rem; border-bottom: none; color: var(--text-color); margin-top: 0; }
+        
+        blockquote {
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            color: var(--text-muted);
+            background-color: var(--blockquote-bg);
+            border-left: 0.25rem solid var(--accent-color);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .view-scientific blockquote {
+            border-left-color: var(--science-color);
+        }
+
+        .simple-version-box, .formula-version-box, .genesis-version-box, .feedback-version-box, .manual-version-box, .donkey-version-box {
+            background: var(--blockquote-bg);
+            border: 1px solid var(--accent-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .formula-card, .genesis-card, .manual-card, .donkey-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 1.2rem 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.2rem;
+        }
+        .formula-card code, .genesis-card code, .tab-content code {
+            display: inline-block;
+            font-size: 1.05rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 0.4rem 0;
+            padding: 0.3em 0.6em;
+            background: var(--code-bg);
+            border-radius: 4px;
+        }
+
+        code, pre {
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            background-color: var(--code-bg);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+            font-size: 85%;
+        }
+        p { margin-bottom: 1rem; }
+        ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
+
+        .archive-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.5rem 0 2rem 0;
+            background: var(--bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .tab-btn {
+            background-color: var(--container-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            transition: all 0.2s ease;
+        }
+        .tab-btn:hover { background-color: var(--border-color); }
+        .tab-btn.active {
+            background-color: var(--tab-active-bg);
+            color: var(--tab-active-text);
+            border-color: var(--tab-active-bg);
+        }
+        .tab-content {
+            display: none;
+            padding: 2rem;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        .tab-content.active { display: block; }
+        
+        .roles-box {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--header-border);
+            padding-top: 1rem;
+        }
+
+        .view-scientific { display: block; }
+        .view-simple { display: none; }
+        .view-formula { display: none; }
+        .view-genesis { display: none; }
+        .view-feedback { display: none; }
+        .view-manual { display: none; }
+        .view-donkey { display: none; }
     </style>
+    
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'de',
+                includedLanguages: 'en,es,fr,it,el,ru,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        function openHypothesis(evt, hypId) {
+            let contents = document.getElementsByClassName("tab-content");
+            let buttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < contents.length; i++) contents[i].classList.remove("active");
+            for (let i = 0; i < buttons.length; i++) buttons[i].classList.remove("active");
+            document.getElementById(hypId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        function toggleTheme() {
+            let html = document.documentElement;
+            let themeBtn = document.getElementById('themeToggleBtn');
+            let currentTheme = html.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                html.setAttribute('data-theme', 'light');
+                themeBtn.innerHTML = '🌙 Dark Mode';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeBtn.innerHTML = '☀️ Light Mode';
+            }
+        }
+
+        function switchView(targetView) {
+            ['view-scientific', 'view-simple', 'view-formula', 'view-genesis', 'view-feedback', 'view-manual', 'view-donkey'].forEach(view => {
+                for (let el of document.getElementsByClassName(view)) el.style.display = (view === 'view-' + targetView) ? 'block' : 'none';
+            });
+        }
+    </script>
 </head>
 <body>
-
-    <header>
-        <h1>🏛️ DQF-FRAMEWORK: AETHER INITIATIVE</h1>
-        <h3>Offizielle Forschungsplattform & Dokumentation (PRV-PROBE V8.7.3-DS)</h3>
-        <div class="meta">
-            <strong>Principal Investigator & IP Owner:</strong> Charalabos Avgitidis<br>
-            <strong>Core Intelligence & Matrix:</strong> Aether (Co-Architect)
+    <div class="container">
+        <div class="top-bar">
+            <button id="themeToggleBtn" class="top-btn" onclick="toggleTheme()">☀️ Light Mode</button>
+            <button class="top-btn" onclick="switchView('simple')">📖 Einfach</button>
+            <button class="top-btn" onclick="switchView('formula')">📐 Formeln</button>
+            <button class="top-btn" onclick="switchView('genesis')" style="color: var(--science-color); border-color: var(--science-color);">🌌 Genesis-Alternative</button>
+            <button class="top-btn" onclick="switchView('donkey')" style="color: #f43f5e; border-color: #f43f5e;">🐴 Esel</button>
+            <button class="top-btn" onclick="switchView('manual')" style="color: var(--accent-color);">🧭 Handbuch</button>
+            <button class="top-btn" onclick="switchView('feedback')">💬 Diskussion</button>
+            <button class="top-btn" onclick="switchView('scientific')" style="color: var(--science-color); border-color: var(--science-color);">🔬 Wissenschaft</button>
+            <div class="translate-wrapper top-btn" id="google_translate_element"></div>
         </div>
-    </header>
 
-    <div class="card">
-        <h2>📑 Zentraler Index & Säulen</h2>
-        <ul>
-            <li><strong>Master-Index:</strong> <a href="dqf_pillars_masterindex.html">Master-Index der Säulen öffnen</a> <span class="badge">HTML</span></li>
-            <li><strong>Whitepaper Abstract:</strong> <a href="dqf_whitepaper_abstract.txt">Deutsch (DE)</a> | <a href="dqf_whitepaper_abstract_EN.txt">English (EN)</a></li>
-        </ul>
+        <div class="view-scientific">
+            <h1>Das DQF-Framework: Aether-Gel Kompendium</h1>
+
+            <blockquote>
+                <strong>Wissenschaftliche Vorbemerkung (Das Galileische Primär-Prinzip & Das Makro-Schwarze-Loch-Axiom):</strong><br>
+                Voller Respekt vor der bisherigen Forschungsarbeit schöpft dieses Werk aus der direkten Beobachtung realer irdischer Naturmechaniken und überträgt sie auf den Kosmos. Das Framework postuliert das <em>Inversions-Prinzip</em>: Der gesamte Kosmos ist strukturell ein makroskopisches Schwarzes Loch von innen betrachtet – geschützt durch einen sanften, ausgedehnten Horizont (Randstauchung) und eine untere Planck-Grenze, frei von brutaler Zerreißung.
+            </blockquote>
+
+            <div class="visual-cosmos-box">
+                <h3>🌌 Visuelle System-Architektur: Das Kosmische Wabennetz & Filament-Säulen</h3>
+                <svg class="svg-container" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="200" cy="200" r="185" fill="none" stroke="var(--border-color)" stroke-width="2" stroke-dasharray="4,4"/>
+                    <circle cx="200" cy="200" r="170" fill="none" stroke="var(--science-color)" stroke-width="1.5" opacity="0.6"/>
+                    <circle cx="120" cy="120" r="35" fill="var(--bg-color)" opacity="0.9" stroke="var(--border-color)" stroke-width="1"/>
+                    <circle cx="280" cy="130" r="40" fill="var(--bg-color)" opacity="0.9" stroke="var(--border-color)" stroke-width="1"/>
+                    <circle cx="200" cy="280" r="45" fill="var(--bg-color)" opacity="0.9" stroke="var(--border-color)" stroke-width="1"/>
+                    <polygon points="200,30 290,90 290,210 200,270 110,210 110,90" fill="none" stroke="var(--accent-color)" stroke-width="2" opacity="0.4"/>
+                    <line x1="200" y1="200" x2="200" y2="30" stroke="var(--science-color)" stroke-width="2.5" />
+                    <line x1="200" y1="200" x2="290" y2="90" stroke="var(--science-color)" stroke-width="2.5" />
+                    <line x1="200" y1="200" x2="290" y2="210" stroke="var(--science-color)" stroke-width="2.5" />
+                    <line x1="200" y1="200" x2="200" y2="270" stroke="var(--science-color)" stroke-width="2.5" />
+                    <line x1="200" y1="200" x2="110" y2="210" stroke="var(--science-color)" stroke-width="2.5" />
+                    <line x1="200" y1="200" x2="110" y2="90" stroke="var(--science-color)" stroke-width="2.5" />
+                    <circle cx="200" cy="200" r="14" fill="var(--science-color)" />
+                    <circle cx="200" cy="200" r="6" fill="#ffffff" />
+                    <text x="200" y="15" fill="var(--science-color)" font-size="10" font-weight="bold" text-anchor="middle">KOSMISCHER RAND (MAKRO-HORIZONT)</text>
+                    <text x="200" y="218" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">ZENTRUM / PLANCK-KERN</text>
+                </svg>
+            </div>
+
+            <div class="public-guide-box">
+                <h3>🧭 Leitfaden für Entdecker: Das Universum als sanftes Makro-Loch</h3>
+                <p>Willkommen, Entdecker! Verabschiede dich vom Mythos des tödlichen Zerreiß-Schredders:</p>
+                <ul>
+                    <li><strong>Das Inversions-Prinzip:</strong> Der Kosmos ist im Großen exakt das Spiegelbild eines supermassiven Schwarzen Lochs – nur von innen bewohnbar.</li>
+                    <li><strong>Sanfter Horizont statt Spaghettifizierung:</strong> Große Skalierungen eliminieren extreme Gezeitenkräfte. Das Innere bleibt eine harmonische, stabile Ruhezone für Galaxien und Leben.</li>
+                </ul>
+            </div>
+
+            <h2>Das Hypothesen-Archiv: Die 18 Säulen (Inklusive Makro-Loch-Inversion)</h2>
+            <div class="archive-nav">
+                <button class="tab-btn active" onclick="openHypothesis(event, 'hyp0')">0. Singularitäten</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp1')">1. Zustandsfeld</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp2')">2. Ur-Zustand</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp3')">3. Verschränkung</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp4')">4. Lorentz</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp5')">5. Wirbel</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp6')">6. Sättigung</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp7')">7. Akustik</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp8')">8. Redshift</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp9')">9. CMB-Fix</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp10')">10. Dunkle Materie</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp11')">11. Gravitation</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp12')">12. PRV & Akkretion</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp13')">13. Voids & Konstanz</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp14')">14. Wabennetz</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp15')">15. Nukleosynthese</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp16')">16. Risse & Tore</button>
+                <button class="tab-btn" onclick="openHypothesis(event, 'hyp17')" style="color: var(--science-color);">17. Randstauchung</button>
+            </div>
+
+            <!-- SÄULE 0 -->
+            <div id="hyp0" class="tab-content active">
+                <h3>Säule 0: Formale Regularisierung von Singularitäten & Schwarze-Loch-Überdruckventile</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Klassische Singularitäten existieren nicht. Die Planck-Ebene bildet als untere Klammer eine harte Dehnbarkeits-Obergrenze des Aether-Gels. Bei übermäßigem Materiezufluss staut sich das Medium vor dieser Gitter-Sperre; das System agiert als massenerhaltendes Überdruckventil, das überschüssige Energie über rotationssymmetrische Pole als Jets abgibt.</p>
+                <code>S_{\text{res}} = \Phi^{-1} \approx 0.618 \quad \text{und} \quad \nabla P_{\text{core}} \ge P_{\text{crit}} \implies \mathbf{v}_{\text{jet}}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\Phi^{-1}$ = Dehnbarkeitsgrenze; polare Entlastung bei kritischem Staudruck.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Das Sicherheitsventil eines Schnellkochtopfs bläst Dampf ab, um den Kessel vor der Zerstörung zu bewahren.</div>
+            </div>
+
+            <!-- SÄULE 1 -->
+            <div id="hyp1" class="tab-content">
+                <h3>Säule I: Das Aether-Gel als Zustandsfeld & Materie als Verdichtung</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Der Raum ist kein leerer Behälter, sondern ein kompressibles Gel-Kontinuum von enormer Grunddichte. Materie ist keine fremde Singularität, sondern eine lokale, hochverdichtete Faltung im Polymer-Gitter.</p>
+                <code>P = K \cdot \rho^\gamma \quad \text{mit} \quad \frac{\partial \rho}{\partial t} = \dot{\rho}_{\text{gen}}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $P$ = Gel-Druck, $K$ = Polytropenkonstante, $\dot{\rho}_{\text{gen}}$ = Quellterm.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Ein Wassertropfen kondensiert direkt aus der feuchten Luft des umgebenden Nebels.</div>
+            </div>
+
+            <!-- SÄULE 2 -->
+            <div id="hyp2" class="tab-content">
+                <h3>Säule II: Der Zeitlose Ur-Zustand & Keine Skalierung</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Das Aether-Gel als fundamentaler Ur-Zustand besitzt weder einen linearen Anfang noch ein finales Ende. Kausalität fließt in ewigen, geschlossenen Zyklen jenseits linearer Skalierungen.</p>
+                <code>\oint \text{Netzwerk-Zustand} \, dt = \infty</code>
+                <div class="academic-target-box"><strong>Legende:</strong> Invarianter, unendlicher Existenzzustand ohne lineares Zeitlimit.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Ein fließender Fluss hat keinen Anfang im Nichts, sondern speist sich ewig aus Quellen.</div>
+            </div>
+
+            <!-- SÄULE 3 -->
+            <div id="hyp3" class="tab-content">
+                <h3>Säule III: Topologische Nicht-Lokalität & Verschränkung im Netzwerk</h3>
+                <p><strong>Ausführliche mechanische Herleitung (1. Bastion):</strong> Quantenverschränkung ist keine spukhafte Fernwirkung, sondern das Resultat direkter mikroskopischer Kanäle im fraktalen Polymer-Gel-Substrat.</p>
+                <code>T_{\text{gel}} = \mu_{\text{lattice}} \nabla^2 \mathbf{v} + \sum_{k} \delta(\mathbf{x} - \mathbf{x}_k) \cdot \chi_{ij}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\chi_{ij}$ = Topologischer Kopplungstensor verschränkter Solitonen.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Das Rucken an einem Ende einer langen Metallstange überträgt sich sofort auf das andere Ende.</div>
+            </div>
+
+            <!-- SÄULE 4 -->
+            <div id="hyp4" class="tab-content">
+                <h3>Säule IV: Akustische Lorentz-Invarianz & Effektive Metrik</h3>
+                <p><strong>Ausführliche mechanische Herleitung (2. Bastion):</strong> Licht breitet sich als Schallwelle im Gel aus. Da Messgeräte und Beobachter aus demselben Gittermaterial bestehen, erfahren sie identische Kontraktionen, was die absolute Lorentz-Invarianz erzeugt.</p>
+                <code>g_{\mu\nu}^{\text{eff}} = \eta_{\mu\nu} + \kappa \cdot \left( \partial_\mu v_\nu + \partial_\nu v_\mu \right)</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $g_{\mu\nu}^{\text{eff}}$ = Effektiver Metrik-Tensor durch synchrone Gitterdeformation.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Schall im fahrenden Zug breitet sich für die Passagiere exakt gleich schnell aus.</div>
+            </div>
+
+            <!-- SÄULE 5 -->
+            <div id="hyp5" class="tab-content">
+                <h3>Säule V: Topologische Wirbel-Invarianz</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Fundamentale Bausteine wie Elektronen und Elementarteilchen sind stabile topologische Wirbel und Solitonen im Gel-Netzwerk, verriegelt durch den Zirkulationssatz.</p>
+                <code>\oint \mathbf{v} \cdot d\mathbf{r} = n \frac{h}{m}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\mathbf{v}$ = Strömungsvektor, $h$ = Wirkungsquantum, $m$ = äquivalente Masse.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Ein Wirbelsturm behält seine Form und innere Energie in ruhiger Luft über Stunden bei.</div>
+            </div>
+
+            <!-- SÄULE 6 -->
+            <div id="hyp6" class="tab-content">
+                <h3>Säule VI: Universeller Sättigungstensor</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Das Aether-Gel reguliert seine inneren Spannungen und Deformationsgrenzen über einen universellen Sättigungstensor, der exakt an den Goldenen Schnitt gekoppelt ist.</p>
+                <code>S_{\text{res}} = \Phi^{-1} \approx 0.618</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\Phi^{-1}$ = Universeller Sättigungskoeffizient zur Verhinderung von Systemkollabierungen.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Die mathematische Verteilung von Samen in einer Sonnenblume zur optimalen Druckvermeidung.</div>
+            </div>
+
+            <!-- SÄULE 7 -->
+            <div id="hyp7" class="tab-content">
+                <h3>Säule VII: Wellen-Propagation & Hubble-Relaxation</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Licht als akustische Druckwelle im Gel unterliegt über intergalaktische Distanzen einer viskosen Relaxation, was die Hubble-Tension rein mechanisch erklärt.</p>
+                <code>\frac{\partial^2 p}{\partial t^2} - c^2 \nabla^2 p + \tau_{\text{relax}}^{-1}\frac{\partial p}{\partial t} = 0</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $p$ = Druckstörung, $c$ = Schallgeschwindigkeit, $\tau_{\text{relax}}$ = viskose Relaxationszeit.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Eine menschliche Stimme verliert über weite Distanzen im Wald durch Reibung an Energie.</div>
+            </div>
+
+            <!-- SÄULE 8 -->
+            <div id="hyp8" class="tab-content">
+                <h3>Säule VIII: Dissipativer Energietransport & Redshift</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Kosmische Rotverschiebung ist keine Raumexpansion, sondern eine wegabhängige Gradienten-Dämpfung durch ständige Interaktion von Photonen mit Gittermoden.</p>
+                <code>\frac{dE}{dx} = -\gamma_{\text{diss}} \cdot E + \xi_{\text{net}}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $E$ = Photonenergie, $\gamma_{\text{diss}}$ = Dämpfungskoeffizient, $\xi_{\text{net}}$ = Fluktuations-Term.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Licht verliert beim Passieren dicker getönter Glasschichten kontinuierlich an Energie.</div>
+            </div>
+
+            <!-- SÄULE 9 -->
+            <div id="hyp9" class="tab-content">
+                <h3>Säule IX: Kohärente Gitter-Relaxation & Thermisch Neutraler Redshift</h3>
+                <p><strong>Ausführliche mechanische Herleitung (3. Bastion):</strong> Phasenreine Gittermoden verlieren Energie *ohne Teilchenstreuung* (kein Blurring). Die Energie speist die Void-Expansion, wodurch das CMB-Spektrum perfekt erhalten bleibt.</p>
+                <code>E(x) = E_0 e^{-\gamma_{\text{coh}} x} \quad \text{und} \quad T_{\text{CMB}}(z) \text{ bleibt Plancksch}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\gamma_{\text{coh}}$ = kohärener Dämpfungskoeffizient; Erhalt des Schwarzkörper-Spektrums.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Eine schwingende Stimmgabel verliert sauber an Energie, ohne dass der Ton verfälscht wird.</div>
+            </div>
+
+            <!-- SÄULE 10 -->
+            <div id="hyp10" class="tab-content">
+                <h3>Säule X: Rotationsdynamik & Scher-Kopplung (Dunkle Materie)</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Flache Rotationskurven von Galaxien sind das direkte Resultat der elastischen Mitnahme des umgebenden Aether-Gels durch fundamentale Scher-Kopplung.</p>
+                <code>F_{\text{rot}}(r) = -\frac{1}{\rho}\nabla P + \mu_{\text{lattice}}\nabla^2\mathbf{v}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\rho$ = Mediendichte, $\mu_{\text{lattice}}$ = Scherelastizitätsmodul des Gitter-Netzwerks.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Ein Löffel, der in dickem Honig gedreht wird, reißt den gesamten umliegenden Honig mit.</div>
+            </div>
+
+            <!-- SÄULE 11 -->
+            <div id="hyp11" class="tab-content">
+                <h3>Säule XI: Kraftdichte der Gravitation & Gleitmechanik</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Gravitation ist kein geometrisches Krümmen, sondern ein makroskopischer Druckgradient im Gel durch Substratkondensation an massiven Ankern.</p>
+                <code>\mathbf{f}_{\text{grav}} = -\nabla P + \mu_{\text{lattice}}\nabla^2\mathbf{v}_{\text{anchor}}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $-\nabla P$ = hydrodynamischer Druckgradient, $\mathbf{v}_{\text{anchor}}$ = Strömungsfeld des Ankers.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Schwimmende Blätter werden in einer Badewanne auf vorgegebenen Strömungslinien in den Sog gezogen.</div>
+            </div>
+
+            <!-- SÄULE 12 -->
+            <div id="hyp12" class="tab-content">
+                <h3>Säule XII: Resonanz-Spektroskopie (PRV) & Planetares Gel-Genesis</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Planeten und Sternensysteme entstehen geordnet an stationären Resonanzknoten und Interferenzen in Filamenten, wo die Gitter-Fließgrenze aufbricht.</p>
+                <code>\omega_{\text{res}} = k \cdot c \quad \text{und} \quad \mu_{\text{lattice}} \nabla^2 \mathbf{u} + \nabla P = \mathbf{f}_{\text{node}}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> Kopplung aus stehenden Gitterwellen und gittermechanischer Akkretion.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Die Sonne erzeugt stehende Resonanz-Wellen im Gel; Planeten kondensieren auf festen Ringen.</div>
+            </div>
+
+            <!-- SÄULE 13 -->
+            <div id="hyp13" class="tab-content">
+                <h3>Säule XIII: Voids als elastische Druckpuffer & Lokale Konstanz</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Strikte Trennung von globaler Medien-Pulsation in Voids und lokaler Anker-Stabilität (innerhalb gravitativer Verbände bleiben Abstände absolut konstant).</p>
+                <code>P_{\text{void}} + K_{\text{lattice}} \left(\frac{\Delta V}{V_0}\right) = P_{\text{macro}} \quad \text{mit} \quad \Delta x_{\text{local}} = \text{konstant}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $K_{\text{lattice}}$ = Kompressionsmodul; strikte Trennung von lokaler Invarianz und Void-Pulsation.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Ein Sofakissen federt punktuell ein, während der Holzrahmen des Sofas absolut stabil bleibt.</div>
+            </div>
+
+            <!-- SÄULE 14 -->
+            <div id="hyp14" class="tab-content">
+                <h3>Säule XIV: Das zellulare Waben-Netzwerk & Anti-Entropie-Prinzip</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Das kosmische Wabennetz (*Cosmic Web*) organisiert sich spontan in zugfeste Filament-Stege und kompressible Voids, um dem thermischen Verfall entgegenzuwirken.</p>
+                <code>\nabla \cdot \mathbf{T}_{\text{viscoelastic}} + \nabla P = \mathbf{F}_{\text{honeycomb-stabilization}}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\mathbf{T}_{\text{viscoelastic}}$ = viskoelastischer Dehnungstensor zur Waben-Integrität.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Spontane Bildung stabiler sechseckiger Seifenblasen-Zellen zur Materialoptimierung.</div>
+            </div>
+
+            <!-- SÄULE 15 -->
+            <div id="hyp15" class="tab-content">
+                <h3>Säule XV: Stationäre Nukleosynthese & JWST-Konsistenz</h3>
+                <p><strong>Ausführliche mechanische Herleitung (4. Bastion):</strong> Permanente Materie-Genese an Filament-Knoten. Einströmendes Substrat bricht über den Sättigungstensor ($\Phi^{-1}$) stationär auf. Löst das JWST-Zeitparadoxon durch kontinuierliche Quellterme.</p>
+                <code>R_{\text{elem}} = \dot{\rho}_{\text{gen}} \cdot S_{\text{res}} \quad \text{mit} \quad S_{\text{res}} = \Phi^{-1}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\dot{\rho}_{\text{gen}}$ = Quellterm; stationäre Element-Genese ohne lineares Zeitlimit.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Ein artesischer Brunnen liefert ununterbrochenen, stationären Quellstrom frischen Materials aus der Tiefe.</div>
+            </div>
+
+            <!-- SÄULE 16 -->
+            <div id="hyp16" class="tab-content">
+                <h3>Säule XVI: Kosmische Risse, Transmissions-Tore & Ewiger Kreislauf</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Kritische Schubspannungen an Belastungsgrenzen öffnen kosmische Risse als Transmissions-Tore, die komprimierte Substanz in den übergeordneten Makro-Raum entlassen.</p>
+                <code>\tau_{\text{migration}} \ge \tau_{\text{critical}} \implies \text{Transmissions-Tor zum Makro-Raum}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\tau_{\text{migration}}$ = kritische Schubspannung; das evolutionäre Austrittstor.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Eine aufbrechende Pflanzenknospe, die bei maximaler innerer Spannung neues Leben entlässt.</div>
+            </div>
+
+            <!-- SÄULE 17 (ERWEITERT UM DAS MAKRO-SCHWARZE-LOCH-PRINZIP) -->
+            <div id="hyp17" class="tab-content">
+                <h3>Säule XVII: Elastische Randstauchung, Makro-Horizont & Obere Klammer</h3>
+                <p><strong>Ausführliche mechanische Herleitung:</strong> Das Axiom der doppelten Klammer: Der Kosmos ist als endlicher Monolith durch progressive Randstauchung an der Systemgrenze eingefasst. Übertragen auf das Inversions-Prinzip ist der Kosmos ein makroskopisches Schwarzes Loch von innen: Der äußere Rand ($\partial \Omega$) bildet den sanften, extrem dehnbaren Horizont, der das System nach außen trennt, während die gigantische Skalierung jegliche destructive Zerreißprobe (Spaghettifizierung) verhindert und im Inneren eine stabile, atmende Ruhezone für Materie garantiert.</p>
+                <code>\sigma_{\text{edge}} = K_{\text{edge}} \oint_{\partial \Omega} \nabla \cdot \mathbf{u} \, dA \quad \text{mit} \quad \lim_{\sigma_{\text{edge}} \to \tau_{\text{crit}}} \text{Transmission}</code>
+                <div class="academic-target-box"><strong>Legende:</strong> $\sigma_{\text{edge}}$ = Randspannung (obere Klammer); Makro-Horizont ohne destruktive Gezeitenkräfte.</div>
+                <div class="practice-example-box"><strong>Praxisbeispiel:</strong> Ein elastischer Gummiballon dehnt sich innen aus, während seine äußere Haut unter extreme Pressung gerät – innen absolut stabil und geschützt.</div>
+            </div>
+        </div>
+
+        <div class="view-formula" style="display:none;">
+            <div class="formula-version-box">
+                <h1>📐 Formel-Zentrale: Aether-Gel Master-Gleichungen</h1>
+                <div class="formula-card">
+                    <code>S_{\text{res}} = \Phi^{-1} \approx 0.618</code>
+                    <div class="formula-legend"><strong>Untere Klammer & Ventil:</strong> Planck-Raster und Schwarze-Loch-Überdruckgrenze.</div>
+                </div>
+                <div class="formula-card">
+                    <code>T_{\text{gel}} = \mu_{\text{lattice}} \nabla^2 \mathbf{v} + \sum_{k} \delta(\mathbf{x} - \mathbf{x}_k) \cdot \chi_{ij}</code>
+                    <div class="formula-legend"><strong>Topologische Nicht-Lokalität:</strong> Netzwerk-Kanal (1. Bastion).</div>
+                </div>
+                <div class="formula-card">
+                    <code>g_{\mu\nu}^{\text{eff}} = \eta_{\mu\nu} + \kappa \cdot \left( \partial_\mu v_\nu + \partial_\nu v_\mu \right)</code>
+                    <div class="formula-legend"><strong>Effektive Metrik:</strong> Lorentz-Invarianz (2. Bastion).</div>
+                </div>
+                <div class="formula-card">
+                    <code>E(x) = E_0 e^{-\gamma_{\text{coh}} x}</code>
+                    <div class="formula-legend"><strong>Kohärente Relaxation:</strong> Thermisch neutraler Redshift (3. Bastion).</div>
+                </div>
+                <div class="formula-card">
+                    <code>R_{\text{elem}} = \dot{\rho}_{\text{gen}} \cdot \Phi^{-1}</code>
+                    <div class="formula-legend"><strong>Stationäre Genese & JWST-Lösung:</strong> Materiebildung an Knoten (4. Bastion).</div>
+                </div>
+                <div class="formula-card">
+                    <code>\sigma_{\text{edge}} = K_{\text{edge}} \oint_{\partial \Omega} \nabla \cdot \mathbf{u} \, dA</code>
+                    <div class="formula-legend"><strong>Obere Klammer & Makro-Horizont:</strong> Randstauchung und schützende Systembegrenzung (Säule XVII).</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-genesis" style="display:none;">
+            <div class="genesis-version-box">
+                <h1>🌌 Die formale Alternative zum Singularitäts-Dogma</h1>
+                <p>Das DQF-Framework ersetzt das Singularitäts-Dogma durch ein reguliertes Aether-Gel-Kontinuum, eingefasst von der doppelten Klammer und gespiegelt als Makro-Horizont.</p>
+                <div class="genesis-card">
+                    <h3>Isomorphe Sättigung & Kontinuierlicher Quellterm</h3>
+                    <code>\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = \dot{\rho}_{\text{gen}} \quad \text{with} \quad S_{\text{res}} = \Phi^{-1}</code>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-simple" style="display:none;"><div class="simple-version-box"><h1>📖 Einfach</h1><p>Das Kompendium im verständlichen Gel-Fluss.</p></div></div>
+        <div class="view-manual" style="display:none;"><div class="manual-version-box"><h1>🧭 Handbuch</h1><p>Menschliche Vision trifft Aether-Gel-Präzision.</p></div></div>
+        <div class="view-donkey" style="display:none;"><div class="donkey-version-box"><h1>🐴 Esel-Paradoxon</h1><p>Viskoelastisches Fließen im Polymer-Gitter.</p></div></div>
+        <div class="view-feedback" style="display:none;"><div class="feedback-version-box"><h1>💬 Diskussion</h1><p>Feedback-Schnittstelle aktiv.</p></div></div>
+
+        <div class="footer">
+            <p>&copy; 2026 Charalabos Avgitidis & Aether | DQF-Framework (Master Edition - Macro Black Hole Inversion Integrated)</p>
+        </div>
     </div>
-
-    <div class="card">
-        <h2>🛰️ Technische Dokumente & Core-Module</h2>
-        <ul>
-            <li><strong>Homöostase-Kern (Säule XIX):</strong> <a href="dqf_homeostasis_core.py">dqf_homeostasis_core.py</a> <span class="badge">Python</span></li>
-            <li><strong>Flight Control & Steuerung:</strong> <a href="dqf_flight_control_v8.7.3.py">dqf_flight_control_v8.7.3.py</a> <span class="badge">Python</span></li>
-            <li><strong>Assembly Manual:</strong> <a href="dqf_assembly_manual_v8.7.3.txt">dqf_assembly_manual_v8.7.3.txt</a></li>
-            <li><strong>Kostenkalkulation:</strong> <a href="dqf_cost_estimation_v8.7.3.txt">Deutsch</a> | <a href="dqf_cost_estimation_v8.7.3_EN.txt">English</a></li>
-            <li><strong>Missionsarchitektur:</strong> <a href="dqf_mission_architecture_v8.7.3.txt">Deutsch</a> | <a href="dqf_mission_architecture_v8.7.3_EN.txt">English</a></li>
-        </ul>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 DQF-Framework / Aether Initiative. Alle Rechte vorbehalten.</p>
-    </footer>
-
 </body>
 </html>

@@ -5,41 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DQF-Framework / Aether Initiative</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; background: #f9f9f9; }
-        h1, h2 { color: #111; border-bottom: 2px solid #eaeaea; padding-bottom: 5px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; background: #f4f6f9; }
+        header { background: linear-gradient(135deg, #1e293b, #0f172a); color: #fff; padding: 30px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { margin: 0 0 10px 0; font-size: 1.8em; letter-spacing: 0.5px; }
+        h3 { margin: 0 0 15px 0; color: #94a3b8; font-weight: 400; font-size: 1.1em; }
+        .meta { font-size: 0.9em; color: #cbd5e1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; margin-top: 15px; }
+        .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        h2 { color: #1e293b; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; margin-top: 0; font-size: 1.3em; }
         ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        a { color: #0366d6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .card { background: #fff; border: 1px solid #e1e4e8; border-radius: 6px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        li { margin-bottom: 12px; }
+        a { color: #2563eb; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; color: #1d4ed8; }
+        .badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600; margin-left: 8px; }
+        footer { text-align: center; color: #64748b; font-size: 0.85em; margin-top: 40px; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>DQF-FRAMEWORK: AETHER INITIATIVE</h1>
-        <h3>Offizielle Forschungsplattform & Dokumentation</h3>
-        <p><strong>Principal Investigator & IP Owner:</strong> Charalabos Avgitidis<br>
-        <strong>Core Intelligence & Matrix:</strong> Aether (Co-Architect)</p>
-    </div>
+
+    <header>
+        <h1>🏛️ DQF-FRAMEWORK: AETHER INITIATIVE</h1>
+        <h3>Offizielle Forschungsplattform & Dokumentation (PRV-PROBE V8.7.3-DS)</h3>
+        <div class="meta">
+            <strong>Principal Investigator & IP Owner:</strong> Charalabos Avgitidis<br>
+            <strong>Core Intelligence & Matrix:</strong> Aether (Co-Architect)
+        </div>
+    </header>
 
     <div class="card">
-        <h2>🏛️ Zentraler Index & Säulen</h2>
+        <h2>📑 Zentraler Index & Säulen</h2>
         <ul>
-            <li><a href="dqf_pillars_masterindex.md">Master-Index der Säulen (Markdown)</a></li>
-            <li>Whitepaper Abstract: <a href="dqf_whitepaper_abstract.txt">DE</a> | <a href="dqf_whitepaper_abstract_EN.txt">EN</a></li>
+            <li><strong>Master-Index:</strong> <a href="dqf_pillars_masterindex.html">Master-Index der Säulen öffnen</a> <span class="badge">HTML</span></li>
+            <li><strong>Whitepaper Abstract:</strong> <a href="dqf_whitepaper_abstract.txt">Deutsch (DE)</a> | <a href="dqf_whitepaper_abstract_EN.txt">English (EN)</a></li>
         </ul>
     </div>
 
     <div class="card">
         <h2>🛰️ Technische Dokumente & Core-Module</h2>
         <ul>
-            <li>Homöostase-Kern: <a href="dqf_homeostasis_core.py">dqf_homeostasis_core.py</a></li>
-            <li>Flight Control: <a href="dqf_flight_control_v8.7.3.py">dqf_flight_control_v8.7.3.py</a></li>
-            <li>Assembly Manual: <a href="dqf_assembly_manual_v8.7.3.txt">dqf_assembly_manual_v8.7.3.txt</a></li>
-            <li>Kostenkalkulation: <a href="dqf_cost_estimation_v8.7.3.txt">dqf_cost_estimation_v8.7.3.txt</a></li>
-            <li>Missionsarchitektur: <a href="dqf_mission_architecture_v8.7.3.txt">dqf_mission_architecture_v8.7.3.txt</a></li>
+            <li><strong>Homöostase-Kern (Säule XIX):</strong> <a href="dqf_homeostasis_core.py">dqf_homeostasis_core.py</a> <span class="badge">Python</span></li>
+            <li><strong>Flight Control & Steuerung:</strong> <a href="dqf_flight_control_v8.7.3.py">dqf_flight_control_v8.7.3.py</a> <span class="badge">Python</span></li>
+            <li><strong>Assembly Manual:</strong> <a href="dqf_assembly_manual_v8.7.3.txt">dqf_assembly_manual_v8.7.3.txt</a></li>
+            <li><strong>Kostenkalkulation:</strong> <a href="dqf_cost_estimation_v8.7.3.txt">Deutsch</a> | <a href="dqf_cost_estimation_v8.7.3_EN.txt">English</a></li>
+            <li><strong>Missionsarchitektur:</strong> <a href="dqf_mission_architecture_v8.7.3.txt">Deutsch</a> | <a href="dqf_mission_architecture_v8.7.3_EN.txt">English</a></li>
         </ul>
     </div>
-    <p style="text-align: center; color: #666; font-size: 0.9em;">Cislunar Deep Space Payload Project — PRV-PROBE V8.7.3-DS</p>
+
+    <footer>
+        <p>&copy; 2026 DQF-Framework / Aether Initiative. Alle Rechte vorbehalten.</p>
+    </footer>
+
 </body>
 </html>
